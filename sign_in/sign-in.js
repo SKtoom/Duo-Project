@@ -47,3 +47,7 @@ $('#connect').on('click',function(){
         $(".alert").text("You don't have an account")
     }
 })
+
+$('#signup').on('click',function(){
+    location.replace("../sign_up/signup.html")
+})
