@@ -49,5 +49,5 @@ $('#connect').on('click',function(){
 })
 
 $('#signup').on('click',function(){
-    location.replace("../sign_up/signup.html")
+    $(location).attr("href","../sign_up/signup.html")
 })
