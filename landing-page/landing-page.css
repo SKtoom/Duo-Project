@@ -1,0 +1,14 @@
+.bottom-navbar{
+    background-color: #316282;
+    opacity: 0.8;
+    width: 100%;
+}
+.bottom-navbar span{
+    color: white; 
+    display: flex;
+    flex-direction: row;
+}
+.navbar span:hover{
+    background-color: #1A9FFF;
+    cursor: pointer;
+}
