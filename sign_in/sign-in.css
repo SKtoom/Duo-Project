@@ -2,6 +2,8 @@
     margin: 0;
 }
 body{
+  background-image: url("../img/back.webp");
+  background-size: cover;
     background-color: #171D25;
 }
 .signin-container{

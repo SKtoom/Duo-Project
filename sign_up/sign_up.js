@@ -51,10 +51,9 @@ $("#continue").on("click",function(){
     arr.push(makeAccount(userName,email,confirmMail,password,confirmPassword,select))
     localStorage.setItem("accounts",arr)
     localStorage.setItem("accounts",JSON.stringify(arr))
+    location.replace("../sign_in/sign-in.html")
         }else {
     $(".alert").text("check the box ")
-       
         }
-
 })
 
