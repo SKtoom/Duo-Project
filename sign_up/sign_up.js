@@ -50,6 +50,7 @@ $("#continue").on("click",function(){
 
     arr.push(makeAccount(userName,email,confirmMail,password,confirmPassword,select))
     localStorage.setItem("accounts",arr)
+    localStorage.setItem("accounts",JSON.stringify(arr))
         }else {
     $(".alert").text("check the box ")
        
