@@ -41,7 +41,7 @@ $('#connect').on('click',function(){
         return element.userName===user&&element.password===pass
     })
     if(filtered.length){
-        location.replace("../landing-page/landing-page.html")
+        $(location).attr("href","../landing-page/landing-page.html")
     }
     else{
         $(".alert").text("You don't have an account")
