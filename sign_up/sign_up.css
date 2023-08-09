@@ -1,7 +1,7 @@
 
 
 body{
-background-image:url("https://techraptor.net/sites/default/files/styles/image_header/public/2022-08/Steam%20logo%20and%20background%20of%20games.jpg?itok=9J8fOXwI") ;
+background-image:url("../img/back.webp") ;
   background-size: cover;
 background-color: #171D25;
 }
@@ -52,11 +52,12 @@ color : white ;
 font-size: 20px;
 background-color: #1A9FFF;
 width: 50%;
-position: absolute;
-top: 90%;
-left: 23%;
+/* position: absolute; */
+/* top: 90%;
+left: 23%; */
 padding: 10px;
 margin-bottom: 10%;
+margin: auto;
 color: white ; 
 cursor: pointer;
 border-radius: 8px;
