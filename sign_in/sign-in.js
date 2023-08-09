@@ -34,7 +34,7 @@ function filter (coll,predicate){
 //helpers
 
 $('#connect').on('click',function(){
-    var items=JSON.parse(localStoragetitle.getItem("accounts"))
+    var items=JSON.parse(localStorage.getItem("accounts"))
     var user=$('#uname').val()
     var pass=$('#pass').val()
     var filtered=filter(items,function(element){
