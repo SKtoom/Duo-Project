@@ -1,0 +1,3 @@
+$('#pay').on('click',function(){
+    
+})
