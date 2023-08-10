@@ -22,9 +22,51 @@ games.push(makeCard("../img/gta.webp","Gta","Open World","300$"))
 games.push(makeCard("../img/red.jpg","Red Dead Redemtion","Open World","300$"))
 
 
+//buying a game takes it to the cart
 
+
+var cart=[]
+
+function addToCart(id){
+    cart.push(games[id])
+    localStorage.setItem("shopify",JSON.stringify(cart))
+    console.log(id)
+    $('.cardcontainer').append(`
+    <div class="card">
+    <img src="${games[id].img}" alt="">
+    <div class="parag">
+    <p>${games[id].name}</p>
+    <p>${games[id].desc}</p>
+    <p>${games[id].price}</p>
+</div>
+<div class="button">
+    <button id="pay">pay</button>
+    <button id="refund">refund</button>
+</div>
+</div>
+    `)
+}
+
+var shop=JSON.parse(localStorage.getItem('shopify'))
+shop.forEach(function(element){
+    $('.cardcontainer').append(`
+    <div class="card">
+    <img src="${element.img}" alt="">
+    <div class="parag">
+    <p>${element.name}</p>
+    <p>${element.desc}</p>
+    <p>${element.price}</p>
+</div>
+<div class="button">
+    <button id="pay">pay</button>
+    <button id="refund">refund</button>
+</div>
+</div>
+    `)
+});
 //appending my games to my store
 for(var i=0;i<games.length;i++){
+    
     $('.test').append(`<div class="cardGame">
     <img src="${games[i].img}" alt="">
     <div class="plus">
@@ -34,8 +76,8 @@ for(var i=0;i<games.length;i++){
     <p>${games[i].price}</p>
 </div>
 <div class="icons">
-    <a><i class="fa-regular fa-heart"></i></a>
-    <a><i class="fa-solid fa-plus"></i></a>
+    <a id="${'h'+i}"><i class="fa-regular fa-heart"></i></a>
+    <a id="${'c'+i}"><i onclick="addToCart(${i})"  class="fa-solid fa-plus"></i></a>
 </div>
 </div>
 </div>`)
@@ -62,19 +104,15 @@ $('#fight').on('click',function(){
                 <p>${games[i].price}</p>
             </div>
             <div class="icons">
-                <a onclick='addToCart(${i})' href=""><i class="fa-regular fa-heart"></i></a>
-                <a href=""><i class="fa-solid fa-plus"></i></a>
+                <a id="${'h'+i}"><i class="fa-regular fa-heart"></i></a>
+                <a id="${'c'+i}"><i class="fa-solid fa-plus"></i></a>
             </div>
             </div>
             </div>`)
         }
    }
 })
-function addToCart(id){
-    var filtered=filter(games,function(element,i){
-        return i==id
-    })
-}
+
 $('#world').on('click',function(){
     $('.test').empty()
    for(var i=0;i<games.length;i++){
@@ -88,8 +126,8 @@ $('#world').on('click',function(){
                 <p>${games[i].price}</p>
             </div>
             <div class="icons">
-                <a href=""><i class="fa-regular fa-heart"></i></a>
-                <a href=""><i class="fa-solid fa-plus"></i></a>
+                <a id="${'h'+i}"><i class="fa-regular fa-heart"></i></a>
+                <a id="${'c'+i}"><i class="fa-solid fa-plus"></i></a>
             </div>
             </div>
             </div>`)
@@ -111,8 +149,8 @@ $('#fps').on('click',function(){
                 <p>${games[i].price}</p>
             </div>
             <div class="icons">
-                <a href=""><i class="fa-regular fa-heart"></i></a>
-                <a href=""><i class="fa-solid fa-plus"></i></a>
+                <a id="${'h'+i}"><i class="fa-regular fa-heart"></i></a>
+                <a id="${'c'+i}"><i class="fa-solid fa-plus"></i></a>
             </div>
             </div>
             </div>`)
@@ -134,8 +172,8 @@ $('#battle').on('click',function(){
                 <p>${games[i].price}</p>
             </div>
             <div class="icons">
-                <a href=""><i class="fa-regular fa-heart"></i></a>
-                <a href=""><i class="fa-solid fa-plus"></i></a>
+                <a id="${'h'+i}"><i class="fa-regular fa-heart"></i></a>
+                <a id="${'c'+i}"><i class="fa-solid fa-plus"></i></a>
             </div>
             </div>
             </div>`)
@@ -161,8 +199,8 @@ $('#searchIcon').on('click',function(){
                     <p>${games[i].price}</p>
                 </div>
                 <div class="icons">
-                    <a><i class="fa-regular fa-heart"></i></a>
-                    <a><i class="fa-solid fa-plus"></i></a>
+                    <a id="${'h'+i}" ><i class="fa-regular fa-heart"></i></a>
+                    <a id="${'c'+i}"><i  class="fa-solid fa-plus"></i></a>
                 </div>
                 </div>
                 </div>`)
@@ -170,3 +208,6 @@ $('#searchIcon').on('click',function(){
        }
     }
 })
+
+
+
