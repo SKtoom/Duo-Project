@@ -19,6 +19,7 @@ nav a{
     margin-left:20px ;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 nav{
     position: absolute;
@@ -117,3 +118,6 @@ div p{
     margin-top: 5px; 
 }
 
+#logo{
+    cursor: pointer;
+}
