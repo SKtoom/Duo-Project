@@ -34,8 +34,8 @@ for(var i=0;i<games.length;i++){
     <p>${games[i].price}</p>
 </div>
 <div class="icons">
-    <a href=""><i class="fa-regular fa-heart"></i></a>
-    <a href=""><i class="fa-solid fa-plus"></i></a>
+    <a><i class="fa-regular fa-heart"></i></a>
+    <a><i class="fa-solid fa-plus"></i></a>
 </div>
 </div>
 </div>`)
@@ -62,7 +62,7 @@ $('#fight').on('click',function(){
                 <p>${games[i].price}</p>
             </div>
             <div class="icons">
-                <a href=""><i class="fa-regular fa-heart"></i></a>
+                <a onclick='addToCart(${i})' href=""><i class="fa-regular fa-heart"></i></a>
                 <a href=""><i class="fa-solid fa-plus"></i></a>
             </div>
             </div>
@@ -70,7 +70,11 @@ $('#fight').on('click',function(){
         }
    }
 })
-
+function addToCart(id){
+    var filtered=filter(games,function(element,i){
+        return i==id
+    })
+}
 $('#world').on('click',function(){
     $('.test').empty()
    for(var i=0;i<games.length;i++){
