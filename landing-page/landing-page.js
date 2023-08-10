@@ -40,15 +40,19 @@ function addToCart(id){
     <p>${games[id].price}</p>
 </div>
 <div class="button">
-    <button id="pay">pay</button>
-    <button id="refund">refund</button>
+    <button id='${'p'+i}'>pay</button>
+    <button id='${'r'+i}'>refund</button>
 </div>
 </div>
     `)
 }
 
+function pay(id){
+    
+}
+
 var shop=JSON.parse(localStorage.getItem('shopify'))
-shop.forEach(function(element){
+shop.forEach(function(element,i){
     $('.cardcontainer').append(`
     <div class="card">
     <img src="${element.img}" alt="">
@@ -58,11 +62,12 @@ shop.forEach(function(element){
     <p>${element.price}</p>
 </div>
 <div class="button">
-    <button id="pay">pay</button>
-    <button id="refund">refund</button>
+    <button class="pay" id="${'p'+i}" onclick="pay(${i})">pay</button>
+    <button class='refund' id="${'r'+i}" onclick="refund(${i})">refund</button>
 </div>
 </div>
     `)
+    
 });
 //appending my games to my store
 for(var i=0;i<games.length;i++){
@@ -86,7 +91,7 @@ for(var i=0;i<games.length;i++){
 
 //home logo tkaes you to the landing page
 $('#logo').on('click',function(){
-    $(location).attr('href','landing-page.html')
+    $(location).attr('href','../landing-page/landing-page.html')
 })
 
 //filtering by categories

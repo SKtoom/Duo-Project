@@ -1,3 +1,0 @@
-$('#pay').on('click',function(){
-    
-})
