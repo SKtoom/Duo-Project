@@ -65,3 +65,17 @@ margin: 10px;
 width: auto;
 color: white;
 }
+img{
+width : 5%;
+left: 60%;
+top: 8%;
+}
+
+.carte {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;    
+    left: 390px;
+}
