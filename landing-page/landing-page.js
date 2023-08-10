@@ -10,12 +10,12 @@ function makeCard(img,name,desc,price){
 var games=[]
 games.push(makeCard("../img/pubg.png","Pubg","Battle Ground","300$"))
 games.push(makeCard("../img/fortnite.jpg","Fortnite","Battle Ground","300$"))
-games.push(makeCard("../img/csgo.png","CSGO","FPS","300$"))
+games.push(makeCard("../img/csgo.webp","CSGO","FPS","300$"))
 games.push(makeCard("../img/valo.jpg","Valorant","FPS","300$"))
-games.push(makeCard("../img/tekken.png","Tekken","Fighting","300$"))
-games.push(makeCard("../img/brawl.png","BrawlHalla","Fighting","300$"))
-games.push(makeCard("../img/gta.png","Gta","Open World","300$"))
-games.push(makeCard("../img/red.png","Red Dead Redemtion","Open World","300$"))
+games.push(makeCard("../img/tekken.webp","Tekken","Fighting","300$"))
+games.push(makeCard("../img/brawl.jpg","BrawlHalla","Fighting","300$"))
+games.push(makeCard("../img/gta.webp","Gta","Open World","300$"))
+games.push(makeCard("../img/red.jpg","Red Dead Redemtion","Open World","300$"))
 console.log(games)
 for(var i=0;i<games.length;i++){
     $('.test').append(`<div class="cardGame">
