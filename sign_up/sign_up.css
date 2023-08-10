@@ -31,7 +31,7 @@ padding: 10px;
 margin: 15px;
 background-color: #171D25;
 border-radius: 8px;
-border: none;
+border: #1A9FFF 2px solid;
 outline: none;
 }
 #selection{
@@ -40,7 +40,8 @@ width: 20%;
 margin-left: 3%;
 background-color: #171D25 ;
 color: white;
-border: none ;
+ border: #1A9FFF 2px solid;
+
 }
 #checkbox{
 margin-left: -90%;
