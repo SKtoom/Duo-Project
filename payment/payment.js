@@ -19,5 +19,9 @@ else {
 }
 })
 $("#cancel").on("click",function(){
+    var deleted=JSON.parse(localStorage.getItem('deleted'))
+    var shop=JSON.parse(localStorage.getItem('shopify'))
+    shop.push(deleted[0])
+    localStorage.setItem("shopify",JSON.stringify(shop))
 $(location).attr("href","../cart/cart.html")
 })
