@@ -48,7 +48,27 @@ function addToCart(id){
 }
 
 function pay(id){
-    
+    var deleted=shop.splice(id,1)
+    localStorage.setItem("deleted",JSON.stringify(deleted))
+    localStorage.setItem("shopify",JSON.stringify(shop))
+    shop.forEach(function(element,i){
+        $('.cardcontainer').html(`
+        <div class="card">
+        <img src="${element.img}" alt="">
+        <div class="parag">
+        <p>${element.name}</p>
+        <p>${element.desc}</p>
+        <p>${element.price}</p>
+    </div>
+    <div class="button">
+        <button class="pay" id="${'p'+i}" onclick="pay(${i})">pay</button>
+        <button class='refund' id="${'r'+i}" onclick="refund(${i})">refund</button>
+    </div>
+    </div>
+        `)
+        
+    });
+    $(location).attr('href','../payment/payment.html')
 }
 
 var shop=JSON.parse(localStorage.getItem('shopify'))
