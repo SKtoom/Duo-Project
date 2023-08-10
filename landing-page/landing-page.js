@@ -6,7 +6,6 @@ function makeCard(img,name,desc,price){
     card.price=price
     return card
 }
-
 var games=[]
 games.push(makeCard("../img/pubg.png","Pubg","Battle Ground","300$"))
 games.push(makeCard("../img/fortnite.jpg","Fortnite","Battle Ground","300$"))
