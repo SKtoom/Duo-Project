@@ -45,7 +45,8 @@ button {
     margin-bottom: 4%;
     background-color: #171D25;
     color: white;
-    
+    border: #1A9FFF 2px solid;
+
   }
  
   .sign-in{
