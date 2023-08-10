@@ -77,3 +77,6 @@
       display: flex;
     }
     
+    #logo{
+      cursor: pointer;
+    }
