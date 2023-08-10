@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f2226;
+    }
+nav a:hover{
+    color :  #1A9FFF;
+ }
+ nav a{
+     margin-left:20px ;
+     text-decoration: none;
+     color: white;
+     cursor: pointer;
+ }
+ nav{
+     position: absolute;
+     right:  0;
+     margin-right: 20%;
+     background-color: #135f95;
+     display: flex;
+     padding: 10px;
+     width: 750px;
+     justify-content: space-between;
+     font-size: 20px;
+     margin-top: 60px;
+ 
+ }
+ .top-navbar{
+     background-color: #171D25;
+     display: flex ;
+     justify-content: space-around;
+     align-items: center;
+     padding: 7px 5%;
+     }
+     .top-navbar a{
+         display: inline-block;
+         font-size: 25px;
+         text-decoration: none;
+         color: white;
+     }
+     .top-navbar img{
+         background: none;
+         width: 5%;
+     }
+     .top-navbar a:hover{
+     color: #1A9FFF;
+     border-bottom: 1px solid #1A9FFF ;
+     }
+
+.cardcontainer{
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content:center ;
+    margin-top: 5%;
+    margin-left: 30%;
+    
+
+}
+.card img{
+width: 150px;
+border-radius: 5px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border: 1px solid #1A9FFF;
+    padding: 15px;
+    margin-bottom: 2%;
+    /* background-color: #1A9FFF; */
+    background-color: #171D25;
+    border-radius: 10px;
+    box-shadow: #232a2f 0px 10px 30px 10px;
+    /* padding: 10px; */
+
+}
+.card p{
+    background-color: #171D25;
+    color: white;
+    font-size: 25px;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 23px;
+    border: none;
+    outline: none;
+    background: none;
+    background-color: #171D25;
+    padding: 7px 7px;
+    /* margin: 4px; */
+
+}
+.button button{
+margin: 10px;
+width: 120%;
+font-size: 17px;
+color: white;
+background-color: #1A9FFF;
+border-radius: 5px;
+padding: 7px 7px;
+border: none;
+cursor: pointer;
+}
