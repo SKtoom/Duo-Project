@@ -76,22 +76,7 @@ function refund(id){
     shop.splice(id,1)
     localStorage.setItem("shopify",JSON.stringify(shop))
     console.log(shop)
-    shop.forEach(function(element,i){
-        $('.cardcontainer').html(`
-        <div class="card">
-        <img src="${element.img}" alt="">
-        <div class="parag">
-        <p>${element.name}</p>
-        <p>${element.desc}</p>
-        <p>${element.price}</p>
-    </div>
-    <div class="button">
-        <button class="pay" id="${'p'+i}" onclick="pay(${i})">pay</button>
-        <button class='refund' id="${'r'+i}" onclick="refund(${i})">refund</button>
-    </div>
-    </div>
-        `)
-    })
+    $(location).attr('href','../cart/cart.html')
 }
 
 // appending my games to my store
@@ -113,6 +98,7 @@ for (var i = 0; i < games.length; i++) {
 </div>`)
 }
 
+//injecting the games to the cart
 
 var shop = JSON.parse(localStorage.getItem('shopify'))
 shop.forEach(function (element, i) {
