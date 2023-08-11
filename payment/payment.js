@@ -24,5 +24,5 @@ $("#cancel").on("click",function(){
     shop.push(deleted[0])
     localStorage.setItem("shopify",JSON.stringify(shop))
 $(location).attr("href","../cart/cart.html")
-
 })
+$('#pay')
