@@ -7,11 +7,11 @@ var ccv=$("#ccv").val()
 
 if (userName===""){
     alert("put your username")
-} else if (cardNumber==="" || cardNumber.length!==16){
+} else if (cardNumber==="" || cardNumber.length<=16){
    alert( "put a right card number")
-} else if (Expiration==="" || Expiration>4){
+} else if (Expiration==="" || Expiration<=4){
     alert("put your date expiration")
-}else if (ccv==="" || ccv.length!==3 ){
+}else if (ccv==="" || ccv.length<=3 ){
     alert("put a correct ccv")
 }
 else {
@@ -25,4 +25,19 @@ $("#cancel").on("click",function(){
     localStorage.setItem("shopify",JSON.stringify(shop))
 $(location).attr("href","../cart/cart.html")
 })
-$('#pay')
+var deleted=JSON.parse(localStorage.getItem("libGames"))
+// function addToLibrary(){
+//     deleted.forEach(function(element) {
+//         $(".container .center").append(`
+//         <div class="cardGame">
+//         <img src="${element.img}" alt="">
+//         <div class="plus">
+//         <div>
+//             <button>Play</button>
+//     </div>
+//     </div>
+//     </div>
+//     `)
+//     });
+// }
+

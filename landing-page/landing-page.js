@@ -32,24 +32,13 @@ function addToCart(id) {
     cart.push(games[id])
     localStorage.setItem("shopify", JSON.stringify(cart))
     console.log(id)
-    $('.cardcontainer').append(`
-    <div class="card">
-    <img src="${games[id].img}" alt="">
-    <div class="parag">
-    <p>${games[id].name}</p>
-    <p>${games[id].desc}</p>
-    <p>${games[id].price}</p>
-</div>
-<div class="button">
-    <button id='${'p' + i}'>pay</button>
-    <button id='${'r' + i}'>refund</button>
-</div>
-</div>
-    `)
 }
-
+var libGames=[]
 function pay(id) {
     var deleted = shop.splice(id, 1)
+    console.log(deleted);
+    libGames.push(deleted)
+    localStorage.setItem("libGames",JSON.stringify(libGames))
     localStorage.setItem("deleted", JSON.stringify(deleted))
     localStorage.setItem("shopify", JSON.stringify(shop))
     shop.forEach(function (element, i) {
@@ -244,4 +233,6 @@ $('#searchIcon').on('click', function () {
 })
 
 
+
+///// adding game to libraray 
 
