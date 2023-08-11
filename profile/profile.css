@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+.top-navbar{
+    background-color: #171D25;
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px 5%;
+    }
+    .top-navbar a{
+        display: inline-block;
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+    }
+    .top-navbar img{
+        background: none;
+        width: 5%;
+    }
+    .top-navbar a:hover{
+    color: #1A9FFF;
+    border-bottom: 1px solid #1A9FFF ;
+    }
