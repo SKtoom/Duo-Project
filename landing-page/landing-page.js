@@ -1,4 +1,7 @@
-
+//home logo tkaes you to the landing page
+$('#logo').on('click', function () {
+    $(location).attr('href', '../landing-page/landing-page.html')
+})
 //factory function to make the data model for a game
 function makeCard(img, name, desc, price) {
     var card = {}
@@ -69,8 +72,10 @@ function pay(id) {
     $(location).attr('href', '../payment/payment.html')
 }
 function refund(id){
+    console.log(id)
     shop.splice(id,1)
     localStorage.setItem("shopify",JSON.stringify(shop))
+    console.log(shop)
     shop.forEach(function(element,i){
         $('.cardcontainer').html(`
         <div class="card">
@@ -89,24 +94,6 @@ function refund(id){
     })
 }
 
-var shop = JSON.parse(localStorage.getItem('shopify'))
-shop.forEach(function (element, i) {
-    $('.cardcontainer').append(`
-    <div class="card">
-    <img src="${element.img}" alt="">
-    <div class="parag">
-    <p>${element.name}</p>
-    <p>${element.desc}</p>
-    <p>${element.price}</p>
-</div>
-<div class="button">
-    <button class="pay" id="${'p' + i}" onclick="pay(${i})">pay</button>
-    <button class='refund' id="${'r' + i}" onclick="refund(${i})">refund</button>
-</div>
-</div>
-    `)
-
-});
 // appending my games to my store
 for (var i = 0; i < games.length; i++) {
 
@@ -127,10 +114,28 @@ for (var i = 0; i < games.length; i++) {
 }
 
 
-//home logo tkaes you to the landing page
-$('#logo').on('click', function () {
-    $(location).attr('href', '../landing-page/landing-page.html')
-})
+var shop = JSON.parse(localStorage.getItem('shopify'))
+shop.forEach(function (element, i) {
+    $('.cardcontainer').append(`
+    <div class="card">
+    <img src="${element.img}" alt="">
+    <div class="parag">
+    <p>${element.name}</p>
+    <p>${element.desc}</p>
+    <p>${element.price}</p>
+</div>
+<div class="button">
+    <button class="pay" id="${'p' + i}" onclick="pay(${i})">pay</button>
+    <button class='refund' id="${'r' + i}" onclick="refund(${i})">refund</button>
+</div>
+</div>
+    `)
+
+});
+
+
+
+
 
 //filtering by categories
 
